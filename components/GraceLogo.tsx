@@ -30,6 +30,7 @@ export function GraceLogo({
             src={logoSrc}
             alt="GRACE"
             fill
+            priority
             className="object-contain p-1.5"
             sizes="44px"
           />

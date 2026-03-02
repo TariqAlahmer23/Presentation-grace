@@ -1,7 +1,6 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import { useMemo } from "react";
 
 type Star = {
   left: string;
@@ -20,57 +19,67 @@ type ShootingStar = {
   length: string;
 };
 
+function createGenerator(seed: number) {
+  let value = seed >>> 0;
+
+  return () => {
+    value = (value * 1664525 + 1013904223) >>> 0;
+    return value / 4294967296;
+  };
+}
+
+function createStars(): Star[] {
+  const next = createGenerator(20260302);
+
+  return Array.from({ length: 80 }, () => ({
+    left: `${(next() * 100).toFixed(4)}%`,
+    top: `${(next() * 100).toFixed(4)}%`,
+    size: `${(0.8 + next() * 1.8).toFixed(4)}px`,
+    opacity: Number((0.12 + next() * 0.55).toFixed(6)),
+    delay: `${(next() * 5.5).toFixed(4)}s`,
+    duration: `${(3.8 + next() * 4.5).toFixed(4)}s`
+  }));
+}
+
+function createShootingStars(): ShootingStar[] {
+  const next = createGenerator(31415926);
+
+  return Array.from({ length: 4 }, () => ({
+    left: `${(8 + next() * 72).toFixed(4)}%`,
+    top: `${(6 + next() * 44).toFixed(4)}%`,
+    delay: `${(next() * 8).toFixed(4)}s`,
+    duration: `${(6 + next() * 6).toFixed(4)}s`,
+    length: `${(56 + next() * 44).toFixed(4)}px`
+  }));
+}
+
+const STARS = createStars();
+const SHOOTING_STARS = createShootingStars();
+
 export function StarfieldBackground() {
-  const stars = useMemo<Star[]>(
-    () =>
-      Array.from({ length: 80 }, () => ({
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-        size: `${0.8 + Math.random() * 1.8}px`,
-        opacity: 0.12 + Math.random() * 0.55,
-        delay: `${Math.random() * 5.5}s`,
-        duration: `${3.8 + Math.random() * 4.5}s`
-      })),
-    []
-  );
-
-  const shootingStars = useMemo<ShootingStar[]>(
-    () =>
-      Array.from({ length: 4 }, () => ({
-        left: `${8 + Math.random() * 72}%`,
-        top: `${6 + Math.random() * 44}%`,
-        delay: `${Math.random() * 8}s`,
-        duration: `${6 + Math.random() * 6}s`,
-        length: `${56 + Math.random() * 44}px`
-      })),
-    []
-  );
-
   return (
     <div className="starfield" aria-hidden="true">
-      {stars.map((star, index) => (
-        (() => {
-          const style: CSSProperties & Record<"--star-base-opacity", number> = {
-            left: star.left,
-            top: star.top,
-            width: star.size,
-            height: star.size,
-            opacity: star.opacity,
-            animationDelay: star.delay,
-            animationDuration: star.duration,
-            "--star-base-opacity": star.opacity
-          };
+      {STARS.map((star, index) => {
+        const style: CSSProperties & Record<"--star-base-opacity", number> = {
+          left: star.left,
+          top: star.top,
+          width: star.size,
+          height: star.size,
+          opacity: star.opacity,
+          animationDelay: star.delay,
+          animationDuration: star.duration,
+          "--star-base-opacity": star.opacity
+        };
 
-          return (
+        return (
         <span
           key={`star-${index}`}
           className="starfield-star"
           style={style}
         />
-          );
-        })()
-      ))}
-      {shootingStars.map((star, index) => (
+        );
+      })}
+      {SHOOTING_STARS.map((star, index) => (
         <span
           key={`shooting-star-${index}`}
           className="shooting-star"

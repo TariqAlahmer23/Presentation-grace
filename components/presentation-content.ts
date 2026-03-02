@@ -1,5 +1,14 @@
 export type Locale = "en" | "ar" | "de";
 
+const TEAM = [
+  ["Tariq Alahmer", "", ""],
+  ["Mohammed Zair", "", ""],
+  ["Afaf Alshalaby", "", ""],
+  ["Rawan Zair", "", ""],
+  ["Yousef Latifa", "", ""],
+  ["Thair Haider", "", ""]
+] as const;
+
 export const COPY = {
   en: {
     navSummary:
@@ -8,28 +17,35 @@ export const COPY = {
       slide: "Slide",
       progress: "Progress",
       explore: "Explore the Platform",
-      contact: "Book a live walkthrough",
+      contact: "Contact Us",
       website: "Main Website",
       download: "Download APK (Beta)",
-      tasks: "Today’s Tasks",
-      tasksBadge: "0/5 completed"
+      appFlow: "App Flow",
+      tasks: "Today's Tasks",
+      tasksBadge: "0/5 completed",
+      mobileExperience: "Experience Grace on Mobile",
+      patientExperience: "Patient Experience",
+      therapistExperience: "Therapist Experience"
     },
     sections: [
       {
         badge: "MENTAL HEALTH, RESTRUCTURED.",
-        title: "Grace transforms mental healthcare into a structured, intelligent daily journey.",
+        title:
+          "Grace transforms mental healthcare into a structured, intelligent daily journey.",
         description:
           "Clinical pathways, AI-assisted insights, and therapist-ready workflows unified in one guided ecosystem."
       },
       {
         badge: "OUR SERVICES",
-        title: "A layered mental health system — from intelligent diagnosis to human care.",
+        title:
+          "A layered mental health system - from intelligent diagnosis to human care.",
         description:
-          "Grace is built around four integrated pillars: clinical AI assessment, emotional AI support, structured behavioral training, and therapist integration. Each layer works independently — and together — to create a complete mental health journey."
+          "Grace is built around four integrated pillars: clinical AI assessment, emotional AI support, structured behavioral training, and therapist integration. Each layer works independently - and together - to create a complete mental health journey."
       },
       {
         badge: "OUR APP",
-        title: "A structured daily system for clarity, action, and measurable progress.",
+        title:
+          "A structured daily system for clarity, action, and measurable progress.",
         description:
           "Grace transforms mental health from abstract emotion into guided steps. Each screen reduces friction, clarifies the next action, and reinforces a consistent care rhythm."
       },
@@ -37,11 +53,12 @@ export const COPY = {
         badge: "MEET OUR TEAM",
         title: "Built by operators who understand both care and systems.",
         description:
-          "Grace is developed by a multidisciplinary team blending clinical thinking, product engineering, and trust-first system architecture. We build with long-term responsibility — not short-term hype."
+          "Grace is developed by a multidisciplinary team blending clinical thinking, product engineering, and trust-first system architecture. We build with long-term responsibility - not short-term hype."
       },
       {
         badge: "Pricing",
-        title: "Clear plans for personal care, clinics, and enterprise deployment.",
+        title:
+          "Clear plans for personal care, clinics, and enterprise deployment.",
         description:
           "Pricing is structured for adoption, retention, and measurable support without hidden complexity."
       },
@@ -49,38 +66,62 @@ export const COPY = {
         badge: "SECURITY",
         title: "Security engineered at every layer.",
         description:
-          "Grace is built on a defense-in-depth architecture. From disk encryption to real-time communication safeguards, every layer of the platform is designed to protect user data, prevent abuse, and ensure operational resilience. Core application servers and database infrastructure are hosted in Germany."
+          "Grace is built on a defense-in-depth architecture. Every layer is designed to protect user data, prevent abuse, and ensure operational resilience. Core application servers and database infrastructure are hosted in Germany."
       },
       {
         badge: "AI LAYER",
-        title: "AI that strengthens clinical judgment — not replaces it.",
+        title: "AI that strengthens clinical judgment - not replaces it.",
         description:
-          "Grace AI is structured as a layered system combining deterministic clinical evaluation with adaptive conversational intelligence."
+          "Grace AI combines deterministic clinical evaluation with adaptive conversational intelligence."
       },
       {
         badge: "WHY GRACE",
         title: "Structured care. Ethical intelligence. Real clinical continuity.",
         description:
-          "Grace is designed around long-term mental health structure — not isolated features. It connects assessment, emotional support, behavioral training, and therapist collaboration into one continuous system. Grace is not a feature app. It is a mental health operating system."
+          "Grace connects assessment, emotional support, behavioral training, and therapist collaboration into one continuous system. Grace is not a feature app. It is a mental health operating system."
       },
       {
-        badge: "Contact Us",
+        badge: "CONTACT US",
         title: "Bring Grace into your clinic, program, or partner ecosystem.",
         description:
           "We work with mental health teams, wellness platforms, and employer programs that want a premium digital experience."
       }
     ],
     introHighlights: [
-      ["Guided Pathways", "Clear mental health journeys across assessments, mood tracking, AI interviews, and therapy integration."],
-      ["Therapist-Ready Infrastructure", "AI-generated summaries, structured session preparation, and streamlined client management."],
-      ["Designed for Emotional Stability", "Calm, distraction-free interface built to reduce cognitive overload during stress."],
-      ["Built for Clinical Expansion", "Scalable architecture ready for clinics, organizations, and institutional partnerships."]
+      [
+        "Guided Pathways",
+        "Clear mental health journeys across assessments, mood tracking, AI interviews, and therapy integration."
+      ],
+      [
+        "Therapist-Ready Infrastructure",
+        "AI-generated summaries, structured session preparation, and streamlined client management."
+      ],
+      [
+        "Designed for Emotional Stability",
+        "Calm, distraction-free interface built to reduce cognitive overload during stress."
+      ],
+      [
+        "Built for Clinical Expansion",
+        "Scalable architecture ready for clinics, organizations, and institutional partnerships."
+      ]
     ],
     serviceHighlights: [
-      ["AI Engine", "Clinical-grade structured evaluation. Depression level classification, AI-powered structured interview, cognitive assessments, and data-driven mental health indicators. The AI Engine provides measurable insight before therapy begins."],
-      ["Liora — Emotional AI Companion", "A safe space for emotional release and intelligent reflection. Sentiment detection, therapeutic conversation summaries, personality pattern identification, crisis signal monitoring, and AI journaling. Liora helps users speak — and helps therapists understand."],
-      ["Structured Trainings", "Consistency beyond sessions. Guided micro-practices, cognitive strengthening exercises, emotional regulation modules, and daily task reinforcement. Training transforms insight into behavior."],
-      ["Therapist Discovery", "Human expertise when it matters. Intelligent therapist matching, fit-based recommendations, seamless appointment flow, and AI summaries shared before sessions. Grace connects structured AI insight with real therapeutic care."]
+      [
+        "AI Engine",
+        "Clinical-grade structured evaluation. Depression classification, AI-powered interviews, cognitive assessments, and data-driven mental health indicators."
+      ],
+      [
+        "Liora - Emotional AI Companion",
+        "A safe space for emotional release and intelligent reflection, with sentiment detection, summaries, pattern identification, crisis monitoring, and AI journaling."
+      ],
+      [
+        "Structured Trainings",
+        "Guided micro-practices, cognitive strengthening, emotional regulation modules, and daily task reinforcement."
+      ],
+      [
+        "Therapist Discovery",
+        "Intelligent therapist matching, fit-based recommendations, seamless appointments, and AI summaries shared before sessions."
+      ]
     ],
     taskItems: [
       ["Set Mood", "Daily emotional signal tracking"],
@@ -105,27 +146,46 @@ export const COPY = {
       "Audit Logs",
       "Smart Notifications"
     ],
-    team: [
-      ["Tariq Alahmer", "", ""],
-      ["Mohammed Zair", "", ""],
-      ["Afaf Alshalaby", "", ""],
-      ["Rawan Zair", "", ""],
-      ["Yousef Latifa", "", ""],
-      ["Thair Haider", "", ""]
+    mobileShowcaseText:
+      "A guided sequence that adapts to the user - not the other way around.",
+    team: TEAM,
+    securityPrimaryTitle: "Database Layer Protection",
+    securityPrimaryPoints: [
+      "Full Disk Encryption (LUKS v2) - persistent storage encrypted at the physical disk level.",
+      "Field-Level Encryption - sensitive fields encrypted at the application layer.",
+      "Isolated Database Architecture - PostgreSQL runs in a private container network with no public exposure on Germany-based servers."
     ],
-    plans: [
-      ["Individual", "$19", "For personal growth and steady support habits.", ["Daily task guidance", "Assessments and mood history", "AI support companion"]],
-      ["Therapist", "$89", "For clinicians who want structured engagement between sessions.", ["Client flow dashboard", "Session-ready summaries", "Secure follow-up tools"]],
-      ["Organization", "$249", "For clinics and partners deploying Grace at scale.", ["Admin controls and reporting", "Multi-user role management", "Workflow and notification controls"]]
+    securitySecondaryTitle: "API & Backend Protection",
+    securitySecondaryPoints: [
+      "JWT-based authentication for tokenized access control.",
+      "Rate limiting and abuse protection against brute force and flooding.",
+      "Custom exception handling with no stack trace leakage.",
+      "CORS restricted to approved production domains."
+    ],
+    securityHighlights: [
+      [
+        "Real-Time Layer Security",
+        "Message rate controls, payload size limits, and automatic abusive connection termination."
+      ],
+      [
+        "WebRTC / TURN Infrastructure",
+        "TLS 1.3, DTLS 1.2, strong cipher suites, and isolated relay configuration."
+      ],
+      [
+        "Operations Hardening",
+        "Services run in isolated containers with internal networking, monitoring, log aggregation, secure headers, enforced HTTPS, and Germany-based hosting."
+      ]
     ],
     metrics: [
       ["Our internally designed evaluation model", "Internal", "brain"],
       ["Structured scoring pipelines", "Scoring", "clock"],
-      ["DeepSeek integration for fallback reasoning and extended contextual support", "DeepSeek", "shield"]
+      ["DeepSeek fallback reasoning and extended context support", "DeepSeek", "shield"]
     ],
     aiTitle: "AI Engine",
+    aiSummary:
+      "The structured diagnostic layer. Depression scoring, guided clinical interview logic, cognitive testing modules, and structured mental state indicators built on our proprietary evaluation model.",
     aiBullets: [
-      "Liora — Emotional Support Layer",
+      "Liora - Emotional Support Layer",
       "Sentiment and emotional pattern detection",
       "Context-aware conversation flow",
       "Therapeutic summary generation",
@@ -133,301 +193,351 @@ export const COPY = {
     ],
     differenceA: [
       "Different by Design",
-      "Not just a chatbot — Grace combines structured clinical evaluation with guided emotional AI, not open-ended conversation without direction.",
-      "Not just a therapist directory — measurable insight before sessions begin and continuity after they end.",
-      "Not just wellness content — trainings connect directly to assessments and progress tracking."
+      "Not just a chatbot - Grace combines structured clinical evaluation with guided emotional AI.",
+      "Not just a therapist directory - measurable insight starts before sessions and continues after them.",
+      "Not just wellness content - trainings connect directly to assessments and progress tracking."
     ],
     differenceB: [
       "Different in Depth",
-      "Clinical + Emotional layers — AI Engine handles diagnosis and cognitive tests; Liora supports emotional engagement.",
-      "Structured continuity — every action connects to a measurable care path.",
-      "Institutional readiness — anonymized, consent-based analytics support responsible public health insight.",
-      "Trust-first architecture — privacy and governance are built into workflows, not added later."
+      "Clinical plus emotional layers - AI Engine handles diagnosis and cognitive tests while Liora supports emotional engagement.",
+      "Structured continuity - every action connects to a measurable care path.",
+      "Institutional readiness - consent-based analytics support responsible public health insight.",
+      "Trust-first architecture - privacy and governance are built into workflows."
     ],
-    contactLine: "Ready for clinics, wellness programs, and strategic partnerships.",
+    contactLine:
+      "Ready for clinics, wellness programs, and strategic partnerships.",
     email: "contact@gracee.app",
     secondaryEmail: "tariqalahmer@gracee.app",
     phone: "+963 968 058 784"
   },
   ar: {
     navSummary:
-      "منصة رعاية نفسية تضع الثقة أولاً وتمنح الأفراد والمعالجين والمؤسسات تجربة هادئة ومنظمة وموثوقة.",
+      "منصة صحة نفسية منظمة ومصممة للأفراد والمعالجين الذين يتوقعون الوضوح وهدوء الواجهة وعمقًا سريريًا حقيقيًا.",
     labels: {
       slide: "شريحة",
       progress: "التقدم",
       explore: "استكشف المنصة",
-      contact: "احجز عرضاً مباشراً",
+      contact: "تواصل معنا",
       website: "الموقع الرئيسي",
       download: "تحميل APK (Beta)",
+      appFlow: "مسار التطبيق",
       tasks: "مهام اليوم",
-      tasksBadge: "0/5 مكتمل"
+      tasksBadge: "0/5 مكتمل",
+      mobileExperience: "اختبر Grace على الهاتف",
+      patientExperience: "تجربة المريض",
+      therapistExperience: "تجربة المعالج"
     },
     sections: [
       {
-        badge: "إعادة تعريف الصحة النفسية",
-        title: "تحول Grace الرعاية النفسية الحديثة إلى تجربة يومية منظمة وراقية.",
+        badge: "إعادة هيكلة الصحة النفسية.",
+        title: "تحوّل Grace الرعاية النفسية إلى رحلة يومية منظمة وذكية.",
         description:
-          "نجمع بين المسارات السريرية والدعم المعزز بالذكاء الاصطناعي وأدوات المعالجين في تجربة واحدة هادئة وواضحة."
+          "مسارات سريرية ورؤى مدعومة بالذكاء الاصطناعي وتدفقات عمل جاهزة للمعالجين ضمن منظومة موجهة واحدة."
       },
       {
         badge: "خدماتنا",
-        title: "دعم يمتد من الرعاية الذاتية الموجهة إلى العلاج المدعوم من المختصين.",
+        title: "نظام صحة نفسية متعدد الطبقات - من التشخيص الذكي إلى الرعاية البشرية.",
         description:
-          "تغطي Grace المتابعات والتقييمات والتمارين الموجهة والعثور على معالج وأدوات تشغيلية لفرق الرعاية."
+          "تعتمد Grace على أربع ركائز مترابطة: تقييم سريري بالذكاء الاصطناعي، دعم عاطفي ذكي، تدريبات سلوكية منظمة، وتكامل مع المعالجين. كل طبقة تعمل منفردة - ومعًا - لتشكّل رحلة صحة نفسية متكاملة."
       },
       {
         badge: "تطبيقنا",
-        title: "نظام يومي للوضوح العاطفي والتنفيذ والاستمرارية.",
+        title: "نظام يومي منظم للوضوح والتنفيذ والتقدم القابل للقياس.",
         description:
-          "كل شاشة تقلل الاحتكاك ليعرف المستخدم الخطوة التالية وكيف يتقدم مساره العلاجي."
+          "تحول Grace الصحة النفسية من شعور مجرد إلى خطوات موجهة. كل شاشة تقلل الاحتكاك وتوضح الإجراء التالي وتدعم إيقاع رعاية ثابتًا."
       },
       {
-        badge: "فريقنا",
-        title: "بُني بواسطة مختصين سريريين وقادة منتج ومشغلين يضعون الثقة أولاً.",
+        badge: "تعرف على فريقنا",
+        title: "بُني على يد مشغّلين يفهمون الرعاية والأنظمة معًا.",
         description:
-          "يجمع فريقنا بين خبرة الصحة النفسية والتنفيذ العملي للمنتج وصناعة الأنظمة الموثوقة."
+          "يتم تطوير Grace بواسطة فريق متعدد التخصصات يجمع بين التفكير السريري وهندسة المنتج وبنية أنظمة تضع الثقة أولًا. نحن نبني بمسؤولية طويلة المدى - لا بضجيج قصير الأمد."
       },
       {
         badge: "الأسعار",
-        title: "خطط واضحة للأفراد والعيادات والمؤسسات.",
+        title: "خطط واضحة للرعاية الفردية والعيادات والنشر المؤسسي.",
         description:
-          "التسعير مصمم للتبني والاستمرارية ودعم قابل للقياس دون تعقيد خفي."
+          "تم تصميم التسعير للتبني والاستمرارية والرعاية القابلة للقياس دون تعقيد خفي."
       },
       {
         badge: "الأمان",
-        title: "الخصوصية والحوكمة جزء من المنتج وليستا إضافة لاحقة.",
+        title: "أمان مصمم هندسيًا في كل طبقة.",
         description:
-          "تم تصميم Grace مع التشفير وصلاحيات مبنية على الأدوار وسير عمل قابل للتتبع."
+          "تعتمد Grace على بنية دفاع متعددة الطبقات. كل طبقة مصممة لحماية بيانات المستخدم ومنع الإساءة وضمان المرونة التشغيلية. الخوادم الأساسية والبنية الخاصة بقاعدة البيانات مستضافة في ألمانيا."
       },
       {
         badge: "طبقة الذكاء الاصطناعي",
-        title: "ذكاء اصطناعي يدعم الرحلة العلاجية دون استبدال الحكم السريري.",
+        title: "ذكاء اصطناعي يعزز الحكم السريري - ولا يستبدله.",
         description:
-          "تساعد طبقة الذكاء الاصطناعي المستخدمين على الاستمرار وتساعد المختصين على العمل أسرع مع الحفاظ على الإشراف."
+          "يجمع ذكاء Grace الاصطناعي بين التقييم السريري الحتمي والذكاء الحواري التكيفي."
       },
       {
         badge: "لماذا Grace",
-        title: "Grace مختلفة لأن المنتج مبني حول الثقة لا حول الضجيج.",
+        title: "رعاية منظمة. ذكاء أخلاقي. استمرارية سريرية حقيقية.",
         description:
-          "نركز على تنقل هادئ وخطوات واضحة وتقدم قابل للقياس وعمق تشغيلي حقيقي."
+          "تربط Grace بين التقييم والدعم العاطفي والتدريب السلوكي وتعاون المعالجين ضمن نظام مستمر واحد. Grace ليست تطبيق مزايا. إنها نظام تشغيل للصحة النفسية."
       },
       {
         badge: "تواصل معنا",
-        title: "أدخل Grace إلى عيادتك أو برنامجك أو شبكة شركائك.",
+        title: "أدخل Grace إلى عيادتك أو برنامجك أو منظومة شركائك.",
         description:
-          "نعمل مع فرق الصحة النفسية ومنصات العافية وبرامج الشركات التي تريد تجربة رقمية راقية."
+          "نعمل مع فرق الصحة النفسية ومنصات العافية وبرامج أصحاب العمل التي تريد تجربة رقمية عالية المستوى."
       }
     ],
     introHighlights: [
-      ["رحلات منظمة", "كل مستخدم يرى مساراً واضحاً عبر المتابعات والتقييمات والجلسات والإجراءات التالية."],
-      ["تشغيل جاهز للمعالج", "يحصل المختصون على ملخصات ورؤية لتدفق العملاء وأدوات تدخل دون عبء إداري زائد."],
-      ["هدوء مقصود", "واجهة هادئة وعالية التباين تعزز الثقة في لحظات الضغط."],
-      ["قابلة للتوسع", "يمكن توسيع المنصة إلى العيادات وبرامج العمل والشراكات."]
+      ["مسارات موجهة", "رحلات واضحة عبر التقييمات وتتبع المزاج والمقابلات الذكية والتكامل العلاجي."],
+      ["بنية جاهزة للمعالجين", "ملخصات ذكية وتحضير منظم للجلسات وإدارة أكثر سلاسة للعملاء."],
+      ["مصمم للاستقرار العاطفي", "واجهة هادئة تقلل الحمل المعرفي أثناء التوتر."],
+      ["جاهز للتوسع السريري", "بنية قابلة للتوسع للعيادات والمنظمات والشراكات المؤسسية."]
     ],
     serviceHighlights: [
-      ["تقييمات ومتابعات يومية", "سجلات مزاج وتأملات موجهة تحول الشعور إلى مؤشرات قابلة للمتابعة."],
-      ["اكتشاف المعالج", "يمكن للمستخدمين الوصول إلى المعالج الأنسب بسرعة عبر مؤشرات الملاءمة والإلحاح."],
-      ["تمارين علاجية", "ممارسات قصيرة ووحدات تدريبية تدعم الالتزام المستمر."],
-      ["لوحات تشغيلية", "يمكن للفرق رؤية الاستخدام والمخاطر والاحتياجات غير المحسومة في شاشة واحدة."]
+      ["محرك الذكاء الاصطناعي", "تقييم منظم بمستوى سريري يشمل تصنيف الاكتئاب والمقابلات الذكية والتقييمات المعرفية والمؤشرات القائمة على البيانات."],
+      ["ليورا - الرفيق العاطفي الذكي", "مساحة آمنة للتفريغ العاطفي والتأمل الذكي مع تحليل المشاعر والملخصات ومراقبة إشارات الأزمات."],
+      ["تدريبات منظمة", "ممارسات قصيرة موجهة وتمارين معرفية ووحدات لتنظيم العاطفة وتعزيز يومي للمهام."],
+      ["اكتشاف المعالج", "مطابقة ذكية مع المعالج وتوصيات مبنية على الملاءمة ومواعيد سلسة وملخصات تشارك قبل الجلسات."]
     ],
     taskItems: [
-      ["تسجيل المزاج", "متابعة يومية"],
-      ["التحدث مع ليورا", "مساعد دعم موجه"],
-      ["تقييم الاكتئاب", "فحص سريري"],
-      ["التدريبات", "تمارين علاجية قصيرة"],
-      ["العثور على معالج", "خيارات رعاية مناسبة"]
+      ["سجل المزاج", "تتبع يومي للإشارات العاطفية"],
+      ["تحدث مع ليورا", "تأمل عاطفي موجه"],
+      ["تقييم الاكتئاب", "فحص سريري منظم"],
+      ["التدريبات", "تمارين معرفية وعاطفية قصيرة"],
+      ["ابحث عن معالج", "خيارات رعاية بشرية مناسبة"]
     ],
     therapistTitle: "مصمم للمعالجين",
-    therapistSubtitle: "تدفق العميل والملخصات وأدوات التدخل",
+    therapistSubtitle: "وضوح سريري دون عبء إداري زائد.",
     therapistPoints: [
-      "رؤية واضحة لتدفق العميل عبر الجلسات والمتابعات والنقاط غير المحسومة.",
-      "ملخصات ذكية تقلل مراجعة الملاحظات قبل المواعيد.",
-      "أدوات داخلية للتوصيات اللاحقة والمهام الموجهة والتحويلات."
+      "تدفق موحد للعميل عبر الجلسات والتقييمات",
+      "ملخصات مولدة بالذكاء الاصطناعي قبل المواعيد",
+      "أدوات متابعة منظمة وتسليم موجه للمهام"
     ],
-    techTitle: "مصمم للتشغيل",
-    techSubtitle: "آمن وقابل للتتبع ومبني على الأدوار",
+    techTitle: "مصمم لعمليات رعاية آمنة",
+    techSubtitle: "آمن وقائم على الأدوار وقابل للتتبع بالكامل.",
     techPoints: [
-      "مصادقة آمنة ومسارات بيانات مشفرة وصلاحيات مبنية على الأدوار.",
-      "سجلات تدقيق عالية المستوى للإجراءات الأساسية وتغيرات الحالة.",
-      "إشعارات تدعم الاستمرارية دون كشف سياق حساس."
+      "مصادقة آمنة",
+      "تشفير من طرف إلى طرف",
+      "صلاحيات قائمة على الأدوار",
+      "سجلات تدقيق",
+      "إشعارات ذكية"
     ],
-    team: [
-      ["د. لينا حداد", "الاستراتيجية السريرية", "تضع المسارات المبنية على الأدلة وقواعد الأمان العلاجي ومنطق التصعيد."],
-      ["ميكا باور", "أنظمة المنتج", "يقود نموذج التفاعل الذي يبقي التجربة هادئة وواضحة وقابلة للقياس."],
-      ["سارة ناصر", "الشراكات", "تبني العلاقات السريرية والتجارية مع المزودين والبرامج والمؤسسات."],
-      ["نواه كلاين", "الأمن والمنصة", "يقود البنية التحتية والحوكمة والثقة التشغيلية لمسارات الرعاية الحساسة."]
+    mobileShowcaseText: "تسلسل موجه يتكيف مع المستخدم - وليس العكس.",
+    team: TEAM,
+    securityPrimaryTitle: "حماية طبقة قاعدة البيانات",
+    securityPrimaryPoints: [
+      "تشفير كامل للقرص (LUKS v2) على مستوى التخزين الفيزيائي.",
+      "تشفير على مستوى الحقول للبيانات الحساسة داخل التطبيق.",
+      "بنية قاعدة بيانات معزولة تعمل دون أي تعرض عام وعلى خوادم موجودة في ألمانيا."
     ],
-    plans: [
-      ["فردي", "$19", "للنمو الشخصي وعادات الدعم المستمر.", ["مهام يومية موجهة", "تقييمات وسجل مزاج", "مرافق دعم بالذكاء الاصطناعي"]],
-      ["معالج", "$89", "للمختصين الذين يريدون تفاعلاً منظماً بين الجلسات.", ["لوحة تدفق العملاء", "ملخصات جاهزة للجلسة", "أدوات متابعة آمنة"]],
-      ["مؤسسة", "$249", "للعيادات والشركاء الذين ينشرون Grace على نطاق واسع.", ["تحكم إداري وتقارير", "إدارة أدوار متعددة", "تحكم في سير العمل والإشعارات"]]
+    securitySecondaryTitle: "حماية الواجهة البرمجية والخلفية",
+    securitySecondaryPoints: [
+      "مصادقة مبنية على JWT للتحكم بالوصول.",
+      "تحديد معدل وحماية من الإساءة ضد الهجمات ومحاولات الإغراق.",
+      "معالجة مخصصة للاستثناءات دون تسريب تتبعات الأخطاء.",
+      "تقييد CORS لنطاقات الإنتاج المعتمدة فقط."
+    ],
+    securityHighlights: [
+      ["أمان الطبقة اللحظية", "ضوابط على معدل الرسائل وحدود لحجم الحمولة وإنهاء تلقائي للاتصالات المسيئة."],
+      ["بنية WebRTC / TURN", "TLS 1.3 وDTLS 1.2 ومجموعات تشفير قوية وإعداد ترحيل معزول."],
+      ["تحصين التشغيل", "خدمات معزولة داخل حاويات مع شبكات داخلية ومراقبة وسجلات ورؤوس أمان وHTTPS واستضافة في ألمانيا."]
     ],
     metrics: [
-      ["دورات تفاعل أسرع", "3x", "brain"],
-      ["وقت إداري أقل", "40%", "clock"],
-      ["الثقة أولاً", "24/7", "shield"]
+      ["نموذج التقييم المصمم داخليًا", "داخلي", "brain"],
+      ["مسارات التقييم الهيكلية", "Scoring", "clock"],
+      ["تكامل DeepSeek للاستدلال الاحتياطي والدعم السياقي", "DeepSeek", "shield"]
     ],
-    aiTitle: "ليورا، طبقة الدعم الموجه",
+    aiTitle: "محرك الذكاء الاصطناعي",
+    aiSummary:
+      "الطبقة التشخيصية المنظمة. تتضمن تقييم الاكتئاب ومنطق المقابلة السريرية الموجهة ووحدات الاختبار المعرفي ومؤشرات منظمة للحالة النفسية مبنية على نموذج التقييم الخاص بنا.",
     aiBullets: [
-      "تبقى المحادثات موجهة للدعم والتوجيه والخطوات التالية.",
-      "يمكن توجيه الحالات الحساسة للتصعيد إلى إجراءات رعاية أوضح.",
-      "يمكن للمعالجين مراجعة ملخصات موجزة بدلاً من سجلات طويلة."
+      "ليورا - طبقة الدعم العاطفي",
+      "تحليل المشاعر والأنماط العاطفية",
+      "تدفق محادثة واعٍ بالسياق",
+      "توليد ملخصات علاجية",
+      "توجيه الإشارات الحساسة للأزمات"
     ],
     differenceA: [
-      "منتج يقلل العبء العاطفي",
-      "خطوة تالية واضحة في كل شاشة.",
-      "تشويش ذهني أقل في لحظات الضغط.",
-      "تقدم قابل للقياس لا تحفيز غامض."
+      "مختلفة في التصميم",
+      "ليست مجرد روبوت دردشة - Grace تجمع بين التقييم السريري المنظم والذكاء العاطفي الموجه.",
+      "ليست مجرد دليل للمعالجين - تبدأ الرؤية القابلة للقياس قبل الجلسات وتستمر بعدها.",
+      "ليست مجرد محتوى رفاهية - التدريبات مرتبطة مباشرة بالتقييمات وتتبع التقدم."
     ],
     differenceB: [
-      "عمق تشغيلي لفرق الرعاية",
-      "مسارات المعالج مرتبطة مباشرة برحلة المستخدم.",
-      "يمكن لفرق الرعاية التصرف بناءً على مؤشرات واضحة.",
-      "تتوسع الرؤية الإدارية دون كشف زائد للمعلومات الخاصة."
+      "مختلفة في العمق",
+      "طبقات سريرية وعاطفية - محرك الذكاء الاصطناعي يتولى التشخيص والاختبارات المعرفية بينما تدعم ليورا التفاعل العاطفي.",
+      "استمرارية منظمة - كل إجراء يرتبط بمسار رعاية قابل للقياس.",
+      "جاهزية مؤسسية - تحليلات مبنية على الموافقة تدعم رؤية مسؤولة للصحة العامة.",
+      "بنية تضع الثقة أولًا - الخصوصية والحوكمة مدمجتان في سير العمل."
     ],
     contactLine: "جاهز للعيادات وبرامج العافية والشراكات الاستراتيجية.",
-    email: "CONTACT@GRACEE.APP",
+    email: "contact@gracee.app",
     secondaryEmail: "tariqalahmer@gracee.app",
     phone: "+963 968 058 784"
   },
   de: {
     navSummary:
-      "Eine hochwertige Mental-Health-Plattform fur Menschen, Therapeut:innen und Organisationen mit ruhiger UX und klarer Struktur.",
+      "Eine strukturierte Mental-Health-Plattform für Menschen und Therapeut:innen, die Klarheit, ruhiges Design und echte klinische Tiefe erwarten.",
     labels: {
       slide: "Folie",
       progress: "Fortschritt",
-      explore: "Plattform ansehen",
-      contact: "Live-Demo buchen",
+      explore: "Plattform erkunden",
+      contact: "Kontakt",
       website: "Hauptwebsite",
       download: "APK herunterladen (Beta)",
+      appFlow: "App-Ablauf",
       tasks: "Heutige Aufgaben",
-      tasksBadge: "0/5 erledigt"
+      tasksBadge: "0/5 erledigt",
+      mobileExperience: "Grace auf dem Smartphone erleben",
+      patientExperience: "Patient:innen-Erlebnis",
+      therapistExperience: "Therapeut:innen-Erlebnis"
     },
     sections: [
       {
-        badge: "Mental Health, neu gestaltet",
-        title: "Grace macht moderne mentale Versorgung zu einer gefuhrten, hochwertigen Alltagsroutine.",
+        badge: "MENTAL HEALTH, NEU STRUKTURIERT.",
+        title:
+          "Grace verwandelt mentale Versorgung in eine strukturierte, intelligente tägliche Journey.",
         description:
-          "Klinische Pfade, KI-gestutzte Begleitung und therapeutische Workflows treffen in einer fokussierten Erfahrung zusammen."
+          "Klinische Pfade, KI-gestützte Erkenntnisse und therapeut:innen-taugliche Workflows in einem geführten Ökosystem."
       },
       {
-        badge: "Unsere Leistungen",
-        title: "Unterstutzung von gefuhrter Selbsthilfe bis zu therapeutisch begleiteter Versorgung.",
+        badge: "UNSERE LEISTUNGEN",
+        title:
+          "Ein mehrschichtiges Mental-Health-System - von intelligenter Diagnostik bis zu menschlicher Versorgung.",
         description:
-          "Grace deckt Check-ins, Assessments, gefuhrte Ubungen, Therapeutensuche und operative Tools fur Care-Teams ab."
+          "Grace basiert auf vier integrierten Säulen: klinische KI-Bewertung, emotionale KI-Begleitung, strukturierte Verhaltenstrainings und Therapeut:innen-Integration. Jede Ebene arbeitet eigenständig - und gemeinsam - für eine vollständige Mental-Health-Journey."
       },
       {
-        badge: "Unsere App",
-        title: "Ein tagliches Betriebssystem fur emotionale Klarheit, Handlung und Verbindlichkeit.",
+        badge: "UNSERE APP",
+        title:
+          "Ein strukturiertes tägliches System für Klarheit, Handlung und messbaren Fortschritt.",
         description:
-          "Jeder Screen reduziert Reibung, damit Nutzer den nachsten Schritt und ihren Fortschritt sofort sehen."
+          "Grace verwandelt mentale Gesundheit von abstraktem Empfinden in geführte Schritte. Jeder Screen reduziert Reibung, klärt die nächste Aktion und stärkt einen konstanten Versorgungsrhythmus."
       },
       {
-        badge: "Unser Team",
-        title: "Gebaut von Kliniker:innen, Produktverantwortlichen und vertrauensorientierten Operatoren.",
+        badge: "UNSER TEAM",
+        title:
+          "Gebaut von Operator:innen, die sowohl Versorgung als auch Systeme verstehen.",
         description:
-          "Das Team kombiniert Mental-Health-Expertise, pragmatische Produktumsetzung und robuste Systemarbeit."
+          "Grace wird von einem interdisziplinären Team entwickelt, das klinisches Denken, Product Engineering und vertrauensorientierte Systemarchitektur verbindet. Wir bauen mit langfristiger Verantwortung - nicht mit kurzfristigem Hype."
       },
       {
-        badge: "Preise",
-        title: "Klare Pakete fur Einzelpersonen, Praxen und Organisationen.",
+        badge: "PREISE",
+        title:
+          "Klare Pakete für persönliche Versorgung, Praxen und Enterprise-Rollouts.",
         description:
-          "Die Preisstruktur ist auf Adoption, Bindung und messbare Versorgung ausgelegt."
+          "Die Preisstruktur ist auf Einführung, Bindung und messbare Unterstützung ohne versteckte Komplexität ausgelegt."
       },
       {
-        badge: "Sicherheit",
-        title: "Datenschutz und Governance sind Produktbestandteil, nicht ein Spatzusatz.",
+        badge: "SICHERHEIT",
+        title: "Sicherheit auf jeder Ebene technisch umgesetzt.",
         description:
-          "Grace ist mit Verschlusselung, rollenbasiertem Zugriff und nachvollziehbaren Ablaufen aufgebaut."
+          "Grace basiert auf einer Defense-in-Depth-Architektur. Jede Ebene ist darauf ausgelegt, Nutzerdaten zu schützen, Missbrauch zu verhindern und operative Resilienz sicherzustellen. Kernserver und Datenbankinfrastruktur werden in Deutschland gehostet."
       },
       {
-        badge: "KI-Ebene",
-        title: "KI unterstutzt die Versorgung, ohne klinisches Urteil zu ersetzen.",
+        badge: "KI-EBENE",
+        title: "KI stärkt klinisches Urteilsvermögen - sie ersetzt es nicht.",
         description:
-          "Die KI hilft Nutzern dranzubleiben und Fachpersonen schneller zu arbeiten, mit klarer Aufsicht."
+          "Grace AI verbindet deterministische klinische Bewertung mit adaptiver dialogischer Intelligenz."
       },
       {
-        badge: "Warum Grace",
-        title: "Grace wirkt anders, weil das Produkt um Vertrauen statt um Ablenkung gebaut ist.",
+        badge: "WARUM GRACE",
+        title:
+          "Strukturierte Versorgung. Ethische Intelligenz. Echte klinische Kontinuität.",
         description:
-          "Ruhige Navigation, klare Nachsteschritte, messbarer Fortschritt und operative Tiefe stehen im Zentrum."
+          "Grace verbindet Assessment, emotionale Unterstützung, Verhaltenstrainings und Therapeut:innen-Zusammenarbeit in einem kontinuierlichen System. Grace ist keine Feature-App. Es ist ein Betriebssystem für mentale Gesundheit."
       },
       {
-        badge: "Kontakt",
-        title: "Bringen Sie Grace in Ihre Praxis, Ihr Programm oder Ihr Partnernetzwerk.",
+        badge: "KONTAKT",
+        title:
+          "Bringen Sie Grace in Ihre Praxis, Ihr Programm oder Ihr Partner-Ökosystem.",
         description:
-          "Wir arbeiten mit Mental-Health-Teams, Wellness-Plattformen und Arbeitgeberprogrammen mit Premium-Anspruch."
+          "Wir arbeiten mit Mental-Health-Teams, Wellness-Plattformen und Arbeitgeberprogrammen, die eine hochwertige digitale Erfahrung wollen."
       }
     ],
     introHighlights: [
-      ["Strukturierte Journeys", "Klare Pfade uber Check-ins, Assessments, Sessions und Folgeaktionen."],
-      ["Therapie-taugliche Ops", "Fachpersonen erhalten Zusammenfassungen, Client-Flow-Sicht und Tools ohne Zusatzlast."],
-      ["Ruhig gestaltet", "Die Oberflache bleibt bewusst leise, kontraststark und vertrauensbildend."],
-      ["Erweiterbar", "Die Plattform kann auf Praxen, Arbeitgeberprogramme und Partner skaliert werden."]
+      ["Geführte Pfade", "Klare Journeys über Assessments, Mood-Tracking, KI-Interviews und Therapie-Integration."],
+      ["Therapeut:innen-taugliche Infrastruktur", "KI-Zusammenfassungen, strukturierte Sitzungsvorbereitung und schlankes Client-Management."],
+      ["Für emotionale Stabilität gestaltet", "Eine ruhige Oberfläche, die kognitive Überlastung in Stressmomenten reduziert."],
+      ["Für klinische Expansion gebaut", "Skalierbare Architektur für Praxen, Organisationen und institutionelle Partnerschaften."]
     ],
     serviceHighlights: [
-      ["Assessments und tagliche Check-ins", "Mood-Logs und gefuhrte Reflexionen machen aus Gefuhl belastbare Signale."],
-      ["Therapeutensuche", "Nutzer finden schneller passende Therapeut:innen uber Fit-Signale und gefuhrtes Intake."],
-      ["Therapeutische Ubungen", "Kurze strukturierte Praktiken und Trainingsmodule fordern konstante Nutzung."],
-      ["Operative Dashboards", "Teams sehen Nutzung, Risiken und offene Bedarfe in einer klaren Ansicht."]
+      ["KI-Engine", "Klinisch strukturierte Bewertung mit Depressionsklassifizierung, KI-Interviews, kognitiven Assessments und datenbasierten Indikatoren."],
+      ["Liora - emotionale KI-Begleitung", "Ein sicherer Raum für Entlastung und intelligente Reflexion mit Sentiment-Erkennung, Zusammenfassungen und Krisensignalen."],
+      ["Strukturierte Trainings", "Geführte Mikro-Praktiken, kognitive Stärkung, Emotionsregulation und tägliche Aufgabenverstärkung."],
+      ["Therapeut:innen-Findung", "Intelligentes Matching, passungsbasierte Empfehlungen, nahtlose Termine und KI-Zusammenfassungen vor Sitzungen."]
     ],
     taskItems: [
-      ["Stimmung setzen", "Taglicher Check-in"],
-      ["Mit Liora sprechen", "Gefuhrte Unterstutzung"],
-      ["Depressions-Assessment", "Klinisches Screening"],
-      ["Trainings", "Kurze therapeutische Ubungen"],
-      ["Therapeut:in finden", "Passende Optionen"]
+      ["Stimmung erfassen", "Tägliches Tracking emotionaler Signale"],
+      ["Mit Liora sprechen", "Geführte emotionale Reflexion"],
+      ["Depressions-Assessment", "Strukturiertes klinisches Screening"],
+      ["Trainings", "Kurze kognitive und emotionale Übungen"],
+      ["Therapeut:in finden", "Passende menschliche Versorgungsoptionen"]
     ],
-    therapistTitle: "Fur Therapeut:innen",
-    therapistSubtitle: "Client-Flows, Zusammenfassungen und Tools",
+    therapistTitle: "Für Therapeut:innen",
+    therapistSubtitle: "Klinische Klarheit ohne administrativen Overhead.",
     therapistPoints: [
-      "Client-Flow-Transparenz uber Sitzungen, Check-ins und offene Belastungen hinweg.",
-      "Intelligente Zusammenfassungen reduzieren manuelle Vorbereitung vor Terminen.",
-      "Integrierte Tools fur Empfehlungen, Aufgaben und sichere Ubergaben."
+      "Einheitlicher Client-Flow über Sitzungen und Assessments hinweg",
+      "KI-generierte Zusammenfassungen vor Terminen",
+      "Strukturierte Follow-up-Tools und geführte Aufgabenübergaben"
     ],
-    techTitle: "Fur den Betrieb",
-    techSubtitle: "Sicher, rollenbasiert, nachvollziehbar",
+    techTitle: "Für sichere Care Operations",
+    techSubtitle: "Sicher, rollenbasiert und vollständig nachvollziehbar.",
     techPoints: [
-      "Sichere Authentifizierung, verschlusselte Datenpfade und rollenbasierte Zugriffe.",
-      "Audit-Logs auf hoher Ebene fur zentrale Aktionen und Statuswechsel.",
-      "Benachrichtigungen fur Kontinuitat ohne sensible Inhalte offenzulegen."
+      "Sichere Authentifizierung",
+      "Ende-zu-Ende-Verschlüsselung",
+      "Rollenbasierte Zugriffe",
+      "Audit-Logs",
+      "Intelligente Benachrichtigungen"
     ],
-    team: [
-      ["Dr. Lina Haddad", "Klinische Strategie", "Definiert evidenznahe Pfade, therapeutische Sicherheitsregeln und Eskalationslogik."],
-      ["Mika Bauer", "Produktsysteme", "Verantwortet das Interaktionsmodell fur eine ruhige, klare und messbare Erfahrung."],
-      ["Sara Nasser", "Partnerschaften", "Baut klinische und kommerzielle Beziehungen mit Anbietern und Institutionen auf."],
-      ["Noah Klein", "Sicherheit & Plattform", "Leitet Infrastruktur, Governance und operatives Vertrauen fur sensible Workflows."]
+    mobileShowcaseText:
+      "Eine geführte Sequenz, die sich an die Nutzer:innen anpasst - nicht umgekehrt.",
+    team: TEAM,
+    securityPrimaryTitle: "Schutz der Datenbankebene",
+    securityPrimaryPoints: [
+      "Vollständige Datenträgerverschlüsselung (LUKS v2) auf physischer Speicherebene.",
+      "Feldbasierte Verschlüsselung für sensible Daten auf Anwendungsebene.",
+      "Isolierte Datenbankarchitektur ohne öffentliche Erreichbarkeit auf Servern in Deutschland."
     ],
-    plans: [
-      ["Einzeln", "$19", "Fur personliches Wachstum und stabile Support-Routinen.", ["Tagliche Aufgabenfuhrung", "Assessments und Stimmungsverlauf", "KI-Begleitung"]],
-      ["Therapie", "$89", "Fur Fachpersonen mit strukturierter Begleitung zwischen Sitzungen.", ["Client-Flow-Dashboard", "Session-taugliche Zusammenfassungen", "Sichere Follow-up-Tools"]],
-      ["Organisation", "$249", "Fur Praxen und Partner mit skalierter Grace-Einfuhrung.", ["Admin-Steuerung und Reporting", "Mehrrollen-Management", "Workflow- und Notification-Kontrolle"]]
+    securitySecondaryTitle: "API- und Backend-Schutz",
+    securitySecondaryPoints: [
+      "JWT-basierte Authentifizierung für tokenisierte Zugriffskontrolle.",
+      "Rate Limiting und Abuse Protection gegen Brute Force und Flooding.",
+      "Individuelle Exception-Behandlung ohne Stacktrace-Leaks.",
+      "CORS nur für freigegebene Produktionsdomains."
+    ],
+    securityHighlights: [
+      ["Sicherheit der Echtzeitebene", "Nachrichtenraten-Kontrollen, Payload-Limits und automatische Beendigung missbräuchlicher Verbindungen."],
+      ["WebRTC / TURN-Infrastruktur", "TLS 1.3, DTLS 1.2, starke Cipher Suites und isolierte Relay-Konfiguration."],
+      ["Operative Härtung", "Isolierte Container, interne Netzwerke, Monitoring, Log-Aggregation, sichere Header, HTTPS und Hosting in Deutschland."]
     ],
     metrics: [
-      ["Schnellere Engagement-Zyklen", "3x", "brain"],
-      ["Weniger Admin-Zeit", "40%", "clock"],
-      ["Trust-first Design", "24/7", "shield"]
+      ["Unser intern entwickeltes Bewertungsmodell", "Intern", "brain"],
+      ["Strukturierte Scoring-Pipelines", "Scoring", "clock"],
+      ["DeepSeek-Fallback-Reasoning und erweiterter Kontext", "DeepSeek", "shield"]
     ],
-    aiTitle: "Liora, die gefuhrte Support-Ebene",
+    aiTitle: "KI-Engine",
+    aiSummary:
+      "Die strukturierte diagnostische Ebene. Depressions-Scoring, geführte klinische Interviewlogik, kognitive Testmodule und strukturierte mentale Zustandsindikatoren auf Basis unseres proprietären Bewertungsmodells.",
     aiBullets: [
-      "Gesprache bleiben auf Unterstutzung, Orientierung und Nachsteschritte fokussiert.",
-      "Eskalationssensible Situationen konnen in klarere Care-Aktionen uberfuhrt werden.",
-      "Therapeut:innen sehen kompakte Zusammenfassungen statt langer Dialogprotokolle."
+      "Liora - emotionale Support-Ebene",
+      "Erkennung emotionaler Muster",
+      "Kontextbewusster Gesprächsfluss",
+      "Therapeutische Zusammenfassungen",
+      "Krisensensible Signalweiterleitung"
     ],
     differenceA: [
-      "Ein Produkt, das emotionale Last reduziert",
-      "Ein klarer Nachsteschritt pro Screen.",
-      "Weniger kognitive Unruhe in Stressmomenten.",
-      "Messbarer Fortschritt statt diffuser Motivation."
+      "Anders im Design",
+      "Nicht nur ein Chatbot - Grace kombiniert strukturierte klinische Bewertung mit geführter emotionaler KI.",
+      "Nicht nur ein Therapeut:innen-Verzeichnis - messbare Erkenntnisse beginnen vor Sitzungen und gehen danach weiter.",
+      "Nicht nur Wellness-Content - Trainings sind direkt mit Assessments und Fortschrittsmessung verknüpft."
     ],
     differenceB: [
-      "Operative Tiefe fur Care-Teams",
-      "Therapieworkflows sind direkt mit der Nutzerreise verbunden.",
-      "Care-Teams handeln auf klaren Signalen statt auf fragmentierten Notizen.",
-      "Admin-Sicht skaliert ohne private Daten ubermassig offenzulegen."
+      "Anders in der Tiefe",
+      "Klinische und emotionale Ebenen - die KI-Engine übernimmt Diagnostik und kognitive Tests, Liora unterstützt emotionale Bindung.",
+      "Strukturierte Kontinuität - jede Aktion ist mit einem messbaren Versorgungspfad verbunden.",
+      "Institutionelle Einsatzfähigkeit - einwilligungsbasierte Analysen unterstützen verantwortungsvolle Public-Health-Erkenntnisse.",
+      "Trust-first-Architektur - Datenschutz und Governance sind in Workflows eingebaut."
     ],
-    contactLine: "Bereit fur Praxen, Wellness-Programme und strategische Partnerschaften.",
-    email: "CONTACT@GRACEE.APP",
+    contactLine:
+      "Bereit für Praxen, Wellness-Programme und strategische Partnerschaften.",
+    email: "contact@gracee.app",
     secondaryEmail: "tariqalahmer@gracee.app",
     phone: "+963 968 058 784"
   }

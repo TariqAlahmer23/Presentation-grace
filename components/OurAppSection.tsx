@@ -16,8 +16,12 @@ type OurAppSectionProps = {
   sectionRef?: (node: HTMLElement | null) => void;
   content: {
     labels: {
+      appFlow: string;
       tasks: string;
       tasksBadge: string;
+      mobileExperience: string;
+      patientExperience: string;
+      therapistExperience: string;
     };
     taskItems: ReadonlyArray<readonly [string, string]>;
     therapistTitle: string;
@@ -25,6 +29,8 @@ type OurAppSectionProps = {
     therapistPoints: readonly string[];
     techTitle: string;
     techSubtitle: string;
+    techPoints: readonly string[];
+    mobileShowcaseText: string;
   };
 };
 
@@ -38,14 +44,6 @@ const therapistImages = [
   "/assets/mobile-app-photos/04.png",
   "/assets/mobile-app-photos/05.png",
   "/assets/mobile-app-photos/06.png"
-] as const;
-
-const architectureItems = [
-  "Secure Auth",
-  "Encryption",
-  "RBAC",
-  "Audit Logs",
-  "Notifications"
 ] as const;
 
 function PhoneRail({
@@ -112,7 +110,7 @@ export function OurAppSection({
     <section
       id={id}
       ref={sectionRef}
-      className="relative flex min-h-[100svh] snap-start items-center overflow-hidden px-4 py-24 sm:px-6 sm:py-28 lg:px-10"
+      className="relative flex min-h-[100svh] snap-start items-start overflow-visible px-4 py-24 sm:px-6 sm:py-28 lg:items-center lg:overflow-hidden lg:px-10"
     >
       <BackgroundFX index={index} />
       <SoftBackgroundGlow index={index} />
@@ -162,6 +160,7 @@ export function OurAppSection({
             className="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]"
           >
             <TaskBoard
+              eyebrow={content.labels.appFlow}
               title={content.labels.tasks}
               badge={content.labels.tasksBadge}
               animateOnce
@@ -211,7 +210,7 @@ export function OurAppSection({
                   </div>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  {architectureItems.map((item) => (
+                  {content.techPoints.map((item) => (
                     <div
                       key={item}
                       className="rounded-2xl border border-border/70 bg-white/5 px-3 py-3 text-sm font-medium text-[color:var(--heading)]"
@@ -234,28 +233,27 @@ export function OurAppSection({
           <GlassCard className="overflow-hidden">
             <div className="space-y-8">
               <div className="space-y-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-                    Experience Grace on Mobile
-                  </p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
+                  {content.labels.mobileExperience}
+                </p>
                 <div className="max-w-3xl space-y-2">
                   <h3 className="text-2xl font-semibold text-text">
-                    Experience Grace on Mobile
+                    {content.labels.mobileExperience}
                   </h3>
                   <p className="text-sm leading-7 text-[color:var(--body-text)]">
-                    A guided sequence that adapts to the user — not the other
-                    way around.
+                    {content.mobileShowcaseText}
                   </p>
                 </div>
               </div>
 
               <PhoneRail
-                title="Patient Experience"
+                title={content.labels.patientExperience}
                 images={patientImages}
                 altPrefix="Grace patient interface"
               />
 
               <PhoneRail
-                title="Therapist Experience"
+                title={content.labels.therapistExperience}
                 images={therapistImages}
                 altPrefix="Grace therapist interface"
               />

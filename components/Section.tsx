@@ -30,7 +30,7 @@ export function Section({
     <section
       id={id}
       ref={sectionRef}
-      className="relative flex min-h-[100svh] snap-start items-center overflow-hidden px-4 py-24 sm:px-6 sm:py-28 lg:px-10"
+      className="relative flex min-h-[100svh] snap-start items-start overflow-visible px-4 py-24 sm:px-6 sm:py-28 lg:items-center lg:overflow-hidden lg:px-10"
     >
       <BackgroundFX index={index} />
       <SoftBackgroundGlow index={index} />

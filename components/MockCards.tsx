@@ -74,11 +74,13 @@ export function HighlightGrid({ items }: { items: ListItem[] }) {
 }
 
 export function TaskBoard({
+  eyebrow = "App Flow",
   title,
   badge,
   items,
   animateOnce = false
 }: {
+  eyebrow?: string;
   title: string;
   badge: string;
   items: TaskItem[];
@@ -92,7 +94,7 @@ export function TaskBoard({
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-              App Flow
+              {eyebrow}
             </p>
             <h3 className="mt-2 text-2xl font-semibold text-[color:var(--heading)]">
               {title}
